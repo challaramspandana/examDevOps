@@ -11,7 +11,7 @@ pipeline{
                 steps{
                     echo 'Running the application'
                     bat 'docker rm -f mycontainer || exit 0'
-                    bat 'docker run -p -d 5000:5000 myapp'
+                    bat 'docker run -p 5000:5000 myapp'
                 }
             }
             

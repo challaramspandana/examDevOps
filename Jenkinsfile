@@ -1,5 +1,5 @@
 pipeline{
-    agent any{
+    agent any
         stages{
             stage('Build the docker application'){
                 steps{
@@ -25,4 +25,3 @@ pipeline{
             }
         }
     }
-}

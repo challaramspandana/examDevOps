@@ -14,6 +14,12 @@ pipeline{
                     bat 'docker run -p 5000:5000 myapp'
                 }
             }
+            stage('Testing the Application'){
+                steps{
+                    echo 'Testing the application'
+                    bat 'curl http://localhost:5000'
+                }
+            }
             
         }
         post{

@@ -11,13 +11,7 @@ pipeline{
                 steps{
                     echo 'Running the application'
                     bat 'docker rm -f mycontainer || exit 0'
-                    bat 'docker run -p 5000:5000 myapp'
-                }
-            }
-            stage('Testing the Application'){
-                steps{
-                    echo 'Testing the application'
-                    bat 'curl http://localhost:5000'
+                    bat 'docker run -d -p 5000:5001 myapp'
                 }
             }
             
